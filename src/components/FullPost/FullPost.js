@@ -3,6 +3,13 @@ import axios from 'axios';
 import './FullPost.css';
 
 class FullPost extends Component {
+    componentDidUpdate () {
+        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => {
+            console.log(response.data)
+        })
+    }
+
     render () {
         let post = <p style={{textAlign: 'center'}}>Please select a Post!</p>;
         if(this.props.id) {
