@@ -38,7 +38,7 @@ class Blog extends Component {
 
     render () {
         // just playing around
-        if(this.state.posts.length >1) console.log(this.state.posts)
+        // if(this.state.posts.length >1) console.log(this.state.posts)
         // for real now
         const posts = this.state.posts.map(posts => {
             

@@ -4,9 +4,10 @@ import './FullPost.css';
 
 class FullPost extends Component {
     componentDidUpdate () {
-        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        axios.get('https://jsonplaceholder.typicode.com/posts/'+this.props.id)
         .then(response => {
             console.log(response.data)
+            console.log(this.props.id)
         })
     }
 
